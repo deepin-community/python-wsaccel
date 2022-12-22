@@ -1,0 +1,16 @@
+Description: Use cython3 instead of cython.
+Author: Thomas Goirand <zigo@debian.org>
+Forwarded: no
+Last-Update: 2019-09-08
+
+--- python-wsaccel-0.6.2.orig/setup.py
++++ python-wsaccel-0.6.2/setup.py
+@@ -17,7 +17,7 @@
+ 
+ def cythonize(src):
+     sys.stderr.write("cythonize: %r\n" % (src,))
+-    subprocess.check_call("cython %s" % (src,), shell=True)
++    subprocess.check_call("cython3 %s" % (src,), shell=True)
+ 
+ def ensure_source(src):
+     pyx = os.path.splitext(src)[0] + '.pyx'

@@ -1,0 +1,32 @@
+Source: python-wsaccel
+Section: python
+Priority: optional
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Uploaders:
+ Thomas Goirand <zigo@debian.org>,
+Build-Depends:
+ cython3,
+ debhelper-compat (= 10),
+ dh-python,
+ openstack-pkg-tools (>= 99~),
+ python3-all-dev,
+ python3-pytest,
+ python3-setuptools,
+Standards-Version: 4.1.0
+Vcs-Browser: https://salsa.debian.org/openstack-team/python/python-wsaccel
+Vcs-Git: https://salsa.debian.org/openstack-team/python/python-wsaccel.git
+Homepage: https://github.com/methane/wsaccel
+
+Package: python3-wsaccel
+Architecture: any
+Depends:
+ cython3,
+ ${misc:Depends},
+ ${python3:Depends},
+ ${shlibs:Depends},
+Description: Accelerator for ws4py and AutobahnPython - Python 3.x
+ WSAccell is WebSocket accelerator for AutobahnPython, ws4py and Tornado. It
+ replaces per-byte process in them with Cython version. AutobahnPython
+ beginning with version 0.6 automatically uses WSAccell if available.
+ .
+ This package provides the Python 3.x module.

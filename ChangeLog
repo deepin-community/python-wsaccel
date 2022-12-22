@@ -1,0 +1,34 @@
+0.6.3
+=====
+* Support Python 3.10
+
+0.6.2
+=====
+* Fix memory leak (#8)
+
+0.6
+===
+* Fix XorMasker (Thanks @oberstet)
+
+0.5
+===
+* Support Tornado
+
+0.4
+===
+* Fix Utf8Validator can't validate bytes>=128
+* Accelerate ws4py's masking.
+
+0.3
+===
+* Fix patch_*() doesn't work.
+* Add Cython version of XorMasker for Autobahn.
+
+0.2
+===
+* Rename pacakge from cutf8validator to wsaccel.
+* Fix install from pypi.
+
+0.1
+===
+* First release.
